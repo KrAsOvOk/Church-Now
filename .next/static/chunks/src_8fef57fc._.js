@@ -990,8 +990,18 @@ function ManageEventsPage() {
     // Odstránenie udalosti
     const handleDelete = async (_id)=>{
         if (!_id) return;
-        await fetch(`/api/udalosti/${_id}`, {
-            method: 'DELETE'
+        //
+        //await fetch(`/api/udalosti/${_id}`, {
+        //  method: 'DELETE',
+        //});
+        await fetch('/api/udalosti', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                _id
+            })
         });
         fetchEvents();
     };
@@ -1008,7 +1018,7 @@ function ManageEventsPage() {
                                 children: "Správa udalostí"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                lineNumber: 106,
+                                lineNumber: 113,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1016,13 +1026,13 @@ function ManageEventsPage() {
                                 children: "Pridávajte, upravujte a mažte udalosti."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                lineNumber: 107,
+                                lineNumber: 114,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                        lineNumber: 105,
+                        lineNumber: 112,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1032,20 +1042,20 @@ function ManageEventsPage() {
                                 className: "mr-2 h-4 w-4"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                lineNumber: 110,
+                                lineNumber: 117,
                                 columnNumber: 11
                             }, this),
                             " Pridať novú udalosť"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                        lineNumber: 109,
+                        lineNumber: 116,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                lineNumber: 104,
+                lineNumber: 111,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -1060,21 +1070,21 @@ function ManageEventsPage() {
                                             children: "Názov"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 125,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableHead"], {
                                             children: "Dátum"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                            lineNumber: 119,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableHead"], {
                                             children: "Popis"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                            lineNumber: 120,
+                                            lineNumber: 127,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableHead"], {
@@ -1082,18 +1092,18 @@ function ManageEventsPage() {
                                             children: "Akcie"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                            lineNumber: 121,
+                                            lineNumber: 128,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 124,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                lineNumber: 116,
+                                lineNumber: 123,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableBody"], {
@@ -1104,21 +1114,21 @@ function ManageEventsPage() {
                                                 children: event.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 127,
+                                                lineNumber: 134,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableCell"], {
                                                 children: event.date
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 128,
+                                                lineNumber: 135,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableCell"], {
                                                 children: event.description
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 129,
+                                                lineNumber: 136,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -1132,12 +1142,12 @@ function ManageEventsPage() {
                                                             className: "h-4 w-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                            lineNumber: 132,
+                                                            lineNumber: 139,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 131,
+                                                        lineNumber: 138,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialog"], {
@@ -1152,17 +1162,17 @@ function ManageEventsPage() {
                                                                         className: "h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                        lineNumber: 137,
+                                                                        lineNumber: 144,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                    lineNumber: 136,
+                                                                    lineNumber: 143,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                lineNumber: 135,
+                                                                lineNumber: 142,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogContent"], {
@@ -1173,7 +1183,7 @@ function ManageEventsPage() {
                                                                                 children: "Naozaj chcete odstrániť túto udalosť?"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                                lineNumber: 142,
+                                                                                lineNumber: 149,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogDescription"], {
@@ -1184,13 +1194,13 @@ function ManageEventsPage() {
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                                lineNumber: 143,
+                                                                                lineNumber: 150,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                        lineNumber: 141,
+                                                                        lineNumber: 148,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogFooter"], {
@@ -1199,7 +1209,7 @@ function ManageEventsPage() {
                                                                                 children: "Zrušiť"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                                lineNumber: 148,
+                                                                                lineNumber: 155,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
@@ -1207,58 +1217,58 @@ function ManageEventsPage() {
                                                                                 children: "Odstrániť"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                                lineNumber: 149,
+                                                                                lineNumber: 156,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                        lineNumber: 147,
+                                                                        lineNumber: 154,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                                lineNumber: 140,
+                                                                lineNumber: 147,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 134,
+                                                        lineNumber: 141,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 130,
+                                                lineNumber: 137,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, event._id, true, {
                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                        lineNumber: 126,
+                                        lineNumber: 133,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                lineNumber: 124,
+                                lineNumber: 131,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                        lineNumber: 115,
+                        lineNumber: 122,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                    lineNumber: 114,
+                    lineNumber: 121,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                lineNumber: 113,
+                lineNumber: 120,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -1272,12 +1282,12 @@ function ManageEventsPage() {
                                 children: editingEvent ? 'Upraviť udalosť' : 'Pridať novú udalosť'
                             }, void 0, false, {
                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                lineNumber: 164,
+                                lineNumber: 171,
                                 columnNumber: 19
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                            lineNumber: 163,
+                            lineNumber: 170,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Form"], {
@@ -1295,7 +1305,7 @@ function ManageEventsPage() {
                                                         children: "Názov"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 173,
+                                                        lineNumber: 180,
                                                         columnNumber: 35
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1304,28 +1314,28 @@ function ManageEventsPage() {
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                            lineNumber: 175,
+                                                            lineNumber: 182,
                                                             columnNumber: 39
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 181,
                                                         columnNumber: 35
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 184,
                                                         columnNumber: 35
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 172,
+                                                lineNumber: 179,
                                                 columnNumber: 31
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 175,
                                         columnNumber: 23
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -1337,7 +1347,7 @@ function ManageEventsPage() {
                                                         children: "Dátum"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 186,
+                                                        lineNumber: 193,
                                                         columnNumber: 35
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1346,28 +1356,28 @@ function ManageEventsPage() {
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                            lineNumber: 188,
+                                                            lineNumber: 195,
                                                             columnNumber: 39
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 194,
                                                         columnNumber: 35
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 190,
+                                                        lineNumber: 197,
                                                         columnNumber: 35
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 185,
+                                                lineNumber: 192,
                                                 columnNumber: 31
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 188,
                                         columnNumber: 23
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -1379,7 +1389,7 @@ function ManageEventsPage() {
                                                         children: "Popis"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 199,
+                                                        lineNumber: 206,
                                                         columnNumber: 35
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -1388,28 +1398,28 @@ function ManageEventsPage() {
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 208,
                                                             columnNumber: 39
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 200,
+                                                        lineNumber: 207,
                                                         columnNumber: 35
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                        lineNumber: 203,
+                                                        lineNumber: 210,
                                                         columnNumber: 35
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 198,
+                                                lineNumber: 205,
                                                 columnNumber: 31
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 201,
                                         columnNumber: 23
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogFooter"], {
@@ -1422,12 +1432,12 @@ function ManageEventsPage() {
                                                     children: "Zrušiť"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                    lineNumber: 209,
+                                                    lineNumber: 216,
                                                     columnNumber: 29
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 208,
+                                                lineNumber: 215,
                                                 columnNumber: 27
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1435,35 +1445,35 @@ function ManageEventsPage() {
                                                 children: editingEvent ? 'Uložiť zmeny' : 'Vytvoriť udalosť'
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                                lineNumber: 211,
+                                                lineNumber: 218,
                                                 columnNumber: 27
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                        lineNumber: 207,
+                                        lineNumber: 214,
                                         columnNumber: 23
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                                lineNumber: 167,
+                                lineNumber: 174,
                                 columnNumber: 19
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                            lineNumber: 166,
+                            lineNumber: 173,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                    lineNumber: 162,
+                    lineNumber: 169,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                lineNumber: 161,
+                lineNumber: 168,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1475,18 +1485,18 @@ function ManageEventsPage() {
                     children: "Späť na administráciu"
                 }, void 0, false, {
                     fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                    lineNumber: 219,
+                    lineNumber: 226,
                     columnNumber: 10
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/udalosti/page.tsx",
-                lineNumber: 218,
+                lineNumber: 225,
                 columnNumber: 8
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/admin/udalosti/page.tsx",
-        lineNumber: 103,
+        lineNumber: 110,
         columnNumber: 5
     }, this);
 }

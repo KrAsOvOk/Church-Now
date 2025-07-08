@@ -93,9 +93,16 @@ export default function ManageEventsPage() {
   // Odstránenie udalosti
   const handleDelete = async (_id?: string) => {
     if (!_id) return;
-    await fetch(`/api/udalosti/${_id}`, {
+    //
+    //await fetch(`/api/udalosti/${_id}`, {
+    //  method: 'DELETE',
+    //});
+    await fetch('/api/udalosti', {
       method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ _id }),
     });
+
     fetchEvents();
   };
 
