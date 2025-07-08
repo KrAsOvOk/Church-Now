@@ -95,6 +95,8 @@ __turbopack_context__.s({
     "POST": (()=>POST)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/mongodb.ts [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/mongodb [external] (mongodb, cjs)");
+;
 ;
 async function GET() {
     const client = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"];
@@ -117,9 +119,9 @@ async function DELETE(request) {
     const client = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"];
     const db = client.db("AllData");
     const { _id } = await request.json();
-    const { ObjectId } = __turbopack_context__.r("[externals]/mongodb [external] (mongodb, cjs)");
+    //const { ObjectId } = require("mongodb");
     const result = await db.collection("udalosti").deleteOne({
-        _id: new ObjectId(_id)
+        _id: new __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__["ObjectId"](_id)
     });
     return new Response(JSON.stringify(result), {
         status: 200

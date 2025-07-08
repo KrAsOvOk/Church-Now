@@ -21,7 +21,6 @@ export async function DELETE(request: Request) {
   const db = client.db("AllData");
   const { _id } = await request.json();
   //const { ObjectId } = require("mongodb");
-  
   const result = await db.collection("udalosti").deleteOne({ _id: new ObjectId(_id) });
   return new Response(JSON.stringify(result), { status: 200 });
 }
