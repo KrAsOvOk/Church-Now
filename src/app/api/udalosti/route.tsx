@@ -1,4 +1,5 @@
 import clientPromise from "@/lib/mongodb";
+import { ObjectId } from "mongodb";
 
 export async function GET() {
   const client = await clientPromise;
@@ -19,7 +20,8 @@ export async function DELETE(request: Request) {
   const client = await clientPromise;
   const db = client.db("AllData");
   const { _id } = await request.json();
-  const { ObjectId } = require("mongodb");
+  //const { ObjectId } = require("mongodb");
+  
   const result = await db.collection("udalosti").deleteOne({ _id: new ObjectId(_id) });
   return new Response(JSON.stringify(result), { status: 200 });
 }
